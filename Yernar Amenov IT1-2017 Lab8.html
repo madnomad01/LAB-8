@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+  <h2>2.1</h2>
+  <input type="button" id="hider" onclick="hideElement()" value="Click to hide text"/>
+  <div id="hide">Text</div>
+  <script>
+  	function hideElement(){
+  	document.getElementById("hide").style.visibility="hidden";
+    }
+  </script>
+
+  <h2>2.2</h2>
+  <input type="button" id="hideme" onclick="hideButton()" value="Click to hide me"/>
+  <script>
+  	function hideButton(){
+  		document.getElementById("hideme").style.visibility="hidden";
+  	}
+  </script>
+
+  <h2>2.3</h2>
+  <input type="button" id="change" onclick="changeText()" value="Click on me"/>
+  <input type="text" id="text" value="???">
+  <script>
+  	function changeText(){
+  		document.getElementById("text").value = "!!!";
+  }
+  </script>
+  
+  <h2>2.4</h2>
+  <input type="button" id="showNum" onclick="showNumber()" value="Click on me"/>
+  <input type="text" id="text2" placeholder="Enter number!">
+  <script>
+  	function showNumber(){
+  		var shownMessage = Math.pow(document.getElementById("text2").value, 2);
+  		alert("An embedded page on this page says\n" + shownMessage);
+  	}
+  </script>
+
+  <h2>2.5</h2>
+  <input type="button" id="changeButton" onclick="changeTextButton()" value="Click on me"/>
+  <script>
+  	function changeTextButton(){
+  		document.getElementById("changeButton").value = "New text";
+  	}
+  </script>
+
+  <h2>2.6</h2>
+  <input type="button" id="changeColor" onclick="changeTextColor()" value="Click on me">
+  <input type="text" id="colorText" value="Random text!">
+  <script>
+  	function changeTextColor(){
+  		document.getElementById("colorText").style.color="red";
+  	}
+  </script>
+
+  <h2>2.7</h2>
+  <img src="https://imageup.ru/img232/3827785/naruto-akatsuki-akacuki-tobi.jpg" id="changeImg1"><br>
+  <input type="button" id="buttonImg" onclick="changeImg()" value="Click on me">
+  <script>
+  	function changeImg(){
+  		document.getElementById("changeImg1").src = "https://imageup.ru/img282/3827787/sharingan-naruto-sharingan.jpg";
+  	}
+  </script>
+</body>
+</html>
